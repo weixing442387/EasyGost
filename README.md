@@ -20,7 +20,9 @@
 
 ***  
 ## 完整食用教程  
-* 启动脚本: 在已经运行过`wget --no-check-certificate -O gost.sh https://hub.stsdust.cf/stsdust/EasyGost/raw/master/gost.sh && chmod +x gost.sh && ./gost.sh`一键脚本后，再次运行本脚本只需要输入`./gost.sh`回车即可  
+* 启动脚本: 在已经运行过如下一键脚本的情况下  
+`wget --no-check-certificate -O gost.sh https://hub.stsdust.cf/stsdust/EasyGost/raw/master/gost.sh && chmod +x gost.sh && ./gost.sh`  
+* 再次运行本脚本只需要输入`./gost.sh`回车即可  
 ***
 * 难点1: 协议选择  
 ![1.png](https://i.loli.net/2020/05/19/xtinMIfkzGcUKZ9.png)  
@@ -52,6 +54,7 @@
     "local_address":"127.0.0.1",
     "local_port":22332,
 ```
+
         * 或者这种形式  
 ```
 {
@@ -62,6 +65,7 @@
       "settings": {
         "clients": [
 ```
+
         * 以上2种形式的服务端配置文件都表明服务监听在本机的22332端口上，而不是本地回环，这种情况IP填写本机[C]的公网IP即可  
         * 同样的，通过修改你[C]主机上对应服务的配置文件，可以实现让这一服务仅监听在[C]主机本地回环的端口上，如`127.0.0.1:22332`即如下配置所示  
 ```
@@ -69,6 +73,7 @@
     "local_address":"127.0.0.1",
     "local_port":22332,
 ```
+
         * 或者这种形式  
 ```
 {
@@ -80,6 +85,7 @@
       "settings": {
         "clients": [
 ```
+
         * 以上2种形式的服务端配置文件都表明服务监听在本地回环(127.0.0.1)的22332端口上，换言之，除了本机内部的流量外，其他来源的流量都无法访问这一服务，因此安全系数更高，而GOST恰恰可以把从外部接收来的流量转发至本机内部  
         * 这种情况IP填写为`127.0.0.1`即可  
 * 难点4: 目标端口填写  
