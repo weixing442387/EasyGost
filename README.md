@@ -6,7 +6,7 @@
 ***
 > 脚本简介
 > > 适合懒人的超简单gost一键转发脚本:  
-> > `wget --no-check-certificate -O gost.sh https://hub.stsdust.cf/stsdust/EasyGost/raw/master/gost.sh && chmod +x gost.sh && ./gost.sh`  
+> > `wget --no-check-certificate -O gost.sh https://raw.githubusercontent.com/stsdust/EasyGost/master/gost.sh && chmod +x gost.sh && ./gost.sh`  
 > > 脚本由 @stsdustjc 制作，参考了 @风萧萧兮易水寒 大佬的一键脚本，主要实现了systemd及gost配置文件对gost进行管理，能够在不借助其他工具(如screen)的情况下实现多条转发规则同时生效。但功能性较弱，目前仅支持tcp+udp不加密转发, relay+tls加密转发, relay+tls解密对接转发。也算是能勉强保护一下裸奔的流量和搭建简单隧道的需求了。  
 > > 项目地址及帮助文档:  
 > > https://github.com/stsdust/EasyGost  
@@ -21,7 +21,7 @@
 ***  
 ## 完整食用教程  
 * 启动脚本: 在已经运行过如下一键脚本的情况下  
-`wget --no-check-certificate -O gost.sh https://hub.stsdust.cf/stsdust/EasyGost/raw/master/gost.sh && chmod +x gost.sh && ./gost.sh`  
+`wget --no-check-certificate -O gost.sh https://raw.githubusercontent.com/stsdust/EasyGost/master/gost.sh && chmod +x gost.sh && ./gost.sh`  
 * 再次运行本脚本只需要输入`./gost.sh`回车即可  
 
 ***
